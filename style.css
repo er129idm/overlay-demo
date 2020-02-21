@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0px;
+  padding: 0px;
+  background-color: #eee;
+  width: 100%;
+  height: 100%;
+  font-family: sans-serif;
+}
+
+/* The important CSS parts:
+  - Position is fixed
+  - z-index is used to make sure the layer is always on top
+  - Width is 100vw and height is 100vh to stretch across the screen
+  - pointer-events is set to 'none' so the mouse can still click things below the overlay
+*/
+
+#overlay {
+  position: fixed;
+  z-index: +99;
+  pointer-events: none;
+  top: 0px;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background-image: url('overlay01.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#mainContainer {
+  display: flex;
+  padding: 10vw;
+  justify-content: space-between;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.contentBox {
+  width: 30%;
+  padding: 16px;
+  background-color: #fff;
+  font-size: 2vmin;
+  margin-bottom: 1vmin;
+}
